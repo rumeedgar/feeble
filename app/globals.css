@@ -1,26 +1,131 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans-Regular.woff2') format('woff2'),
+    url('/fonts/GeneralSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans-Medium.woff2') format('woff2'),
+    url('/fonts/GeneralSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans-Bold.woff2') format('woff2'),
+    url('/fonts/GeneralSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@theme {
+  /* Typography */
+  --font-sans: 'General Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+
+  /* Colors */
+  --color-primary: #007AFF;
+  --color-text-primary: #1D2026;
+  --color-text-secondary: #8C97A8;
+  --color-border: #6C788F;
+  --color-white: #FFFFFF;
+  --color-background: #E6F2FF;
+
+  --color-brand: #007AFF;
+  --color-text-main: #1D2026;
+  --color-text-muted: #8C97A8;
+  --color-border-gray: #6C788F;
+  --color-bg-light: #E6F2FF;
+}
+
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Typography Settings */
+  --text-hero-size: 64px;
+  --text-hero-weight: 700;
+  --text-hero-line-height: 120%;
+  --text-hero-spacing: -0.02em;
+
+  --text-subtitle-size: 18px;
+  --text-subtitle-weight: 400;
+  --text-subtitle-line-height: 130%;
+  --text-subtitle-spacing: -0.02em;
+
+  --text-button-size: 16px;
+  --text-button-weight: 500;
+  --text-button-line-height: 120%;
+  --text-button-spacing: -0.02em;
+
+  /* Button Dimensions */
+  --button-radius: 43.62px;
+  --button-width: 138px;
+  --button-height: 41px;
+
+  /* Outline Button */
+  --outline-button-radius: 50px;
+  --outline-button-width: 266px;
+  --outline-button-height: 46px;
+  --outline-button-border: 0.7px;
+
+  /* Navigation */
+  --nav-radius: 200px;
+  --nav-width: 1200px;
+  --nav-height: 81px;
+
+  /* Badge */
+  --badge-radius: 200px;
+  --badge-width: 265px;
+  --badge-height: 28px;
+
+  /* Shadows */
+  --shadow-nav: 0 0.25px 1px 0 rgba(12, 12, 13, 0.05);
+  --shadow-badge: 0 0.25px 1px 0 rgba(12, 12, 13, 0.05);
+  --shadow-button: 0 8px 24px 0 rgba(0, 122, 255, 0.25);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  background: #E6F2FF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.text-hero {
+  font-size: var(--text-hero-size);
+  font-weight: var(--text-hero-weight);
+  line-height: var(--text-hero-line-height);
+  letter-spacing: var(--text-hero-spacing);
+}
+
+.text-subtitle {
+  font-size: var(--text-subtitle-size);
+  font-weight: var(--text-subtitle-weight);
+  line-height: var(--text-subtitle-line-height);
+  letter-spacing: var(--text-subtitle-spacing);
+}
+
+.text-button {
+  font-size: var(--text-button-size);
+  font-weight: var(--text-button-weight);
+  line-height: var(--text-button-line-height);
+  letter-spacing: var(--text-button-spacing);
 }

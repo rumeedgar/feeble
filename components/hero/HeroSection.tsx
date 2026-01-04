@@ -14,7 +14,7 @@ export default function HeroSection() {
   const windowWidth = typeof window !== "undefined" ? window.innerWidth : 2000;
 
   useLayoutEffect(() => {
-      setMounted(true);
+    setMounted(true);
   }, []);
 
   useEffect(() => {
@@ -27,11 +27,11 @@ export default function HeroSection() {
 
   if (!mounted) {
     return (
-      <section className="min-h-screen flex flex-col items-center px-4 relative pb-0">
+      <section className="h-screen flex flex-col items-center px-4 relative pb-0">
         <div
           style={{
-            marginTop: "min(161px, 15vh)",
-            marginBottom: "min(24px, 2vh)",
+            marginTop: "min(120px, 12vh)",
+            marginBottom: "min(16px, 1.5vh)",
           }}
         >
           <Badge icon="/assets/icons/text-bubble.svg">
@@ -41,8 +41,8 @@ export default function HeroSection() {
         <h1
           className="text-center max-w-2xl text-text-main"
           style={{
-            marginBottom: "min(24px, 2vh)",
-            fontSize: "clamp(32px, 5vw, 64px)",
+            marginBottom: "min(16px, 1.5vh)",
+            fontSize: "clamp(28px, 4.5vw, 56px)",
             fontWeight: 700,
             lineHeight: "120%",
             letterSpacing: "-0.02em",
@@ -54,7 +54,7 @@ export default function HeroSection() {
         <p
           className="text-center max-w-xl text-text-main"
           style={{
-            marginBottom: "min(48px, 4vh)",
+            marginBottom: "min(32px, 3vh)",
             fontSize: "clamp(14px, 1.5vw, 18px)",
             fontWeight: 400,
             lineHeight: "130%",
@@ -69,7 +69,7 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="min-h-screen flex flex-col items-center px-4 relative pb-0 overflow-hidden">
+    <section className="h-screen flex flex-col items-center px-5 sm:px-6 relative pb-0 overflow-hidden">
       <motion.img
         src="/assets/icons/white-cloud.svg"
         alt=""
@@ -95,8 +95,8 @@ export default function HeroSection() {
           position: "absolute",
           width: "42.36px",
           height: "13.96px",
-          top: "291px",
-          left: "158.18px",
+          top: "251px",
+          left: "118.18px",
         }}
       />
       <motion.img
@@ -109,7 +109,7 @@ export default function HeroSection() {
           position: "absolute",
           width: "42.36px",
           height: "13.96px",
-          top: "309.02px",
+          top: "289.02px",
           left: "315.3px",
         }}
       />
@@ -125,7 +125,7 @@ export default function HeroSection() {
           width: "42.36px",
           height: "13.96px",
           top: "270px",
-          left: "1280.18px",
+          left: "1160.18px",
         }}
       />
       <motion.img
@@ -139,7 +139,7 @@ export default function HeroSection() {
           width: "42.36px",
           height: "13.96px",
           top: "405px",
-          left: "1300.18px",
+          left: "1230.18px",
         }}
       />
 
@@ -153,8 +153,8 @@ export default function HeroSection() {
           position: "absolute",
           width: "103.38px",
           height: "76.75px",
-          top: "795.39px",
-          left: "281.92px",
+          bottom: "6vh",
+          left: "18%",
           zIndex: 10,
         }}
       />
@@ -168,8 +168,8 @@ export default function HeroSection() {
           position: "absolute",
           width: "87.74px",
           height: "56.99px",
-          top: "781px",
-          left: "525.18px",
+          bottom: "12vh",
+          left: "34%",
           zIndex: 10,
         }}
       />
@@ -183,8 +183,8 @@ export default function HeroSection() {
           position: "absolute",
           width: "128.21px",
           height: "54.38px",
-          top: "856px",
-          left: "1043.18px",
+          bottom: "6vh",
+          right: "27%",
           zIndex: 10,
         }}
       />
@@ -198,8 +198,8 @@ export default function HeroSection() {
           position: "absolute",
           width: "128.93px",
           height: "101.99px",
-          top: "792px",
-          left: "1317.18px",
+          bottom: "6vh",
+          right: "8%",
           zIndex: 10,
         }}
       />
@@ -208,18 +208,18 @@ export default function HeroSection() {
         <motion.img
           src="/assets/icons/bird-bub-2.svg"
           alt=""
-          initial={{ x: -200, y: 400, opacity: 0 }}
+          initial={{ x: -100, y: 400, opacity: 0 }}
           animate={{
-            x: windowWidth + 200,
+            x: windowWidth + 100,
             y: 350,
             opacity: [0, 1, 1, 0],
           }}
           transition={{
-            duration: 4,
+            duration: 6,
             ease: "linear",
             opacity: {
               times: [0, 0.1, 0.9, 1],
-              duration: 4,
+              duration: 6,
             },
           }}
           style={{
@@ -236,22 +236,22 @@ export default function HeroSection() {
           src="/assets/icons/bird-bub-3.svg"
           alt=""
           initial={{
-            x: windowWidth + 200,
+            x: windowWidth + 100,
             y: 450,
             opacity: 0,
           }}
           animate={{
-            x: -200,
+            x: -100,
             y: 400,
             opacity: [0, 1, 1, 0],
             scaleX: -1,
           }}
           transition={{
-            duration: 4,
+            duration: 6,
             ease: "linear",
             opacity: {
               times: [0, 0.1, 0.9, 1],
-              duration: 4,
+              duration: 6,
             },
           }}
           style={{
@@ -269,8 +269,8 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         style={{
-          marginTop: "min(161px, 15vh)",
-          marginBottom: "min(24px, 2vh)",
+          marginTop: "min(180px, 18vh)",
+          marginBottom: "min(16px, 1.5vh)",
         }}
       >
         <Badge icon="/assets/icons/text-bubble.svg">
@@ -283,10 +283,11 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="text-center max-w-2xl text-text-main"
+        className="text-center text-text-main md:px-0"
         style={{
-          marginBottom: "min(24px, 2vh)",
-          fontSize: "clamp(32px, 5vw, 64px)",
+          maxWidth: "580px",
+          marginBottom: "min(16px, 1.5vh)",
+          fontSize: "clamp(28px, 4.5vw, 56px)",
           fontWeight: 700,
           lineHeight: "120%",
           letterSpacing: "-0.02em",
@@ -301,9 +302,9 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.6 }}
-        className="text-center max-w-xl text-text-main"
+        className="text-center max-w-xl text-text-main md:px-0"
         style={{
-          marginBottom: "min(48px, 4vh)",
+          marginBottom: "min(32px, 3vh)",
           fontSize: "clamp(14px, 1.5vw, 18px)",
           fontWeight: 400,
           lineHeight: "130%",
@@ -319,8 +320,10 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.8 }}
-        className="flex items-center gap-4"
-        style={{ marginBottom: "min(54.07px, 5vh)" }}
+        className="flex items-center gap-4 flex-wrap justify-center md:px-0"
+        style={{
+          marginBottom: "min(32px, 3vh)",
+        }}
       >
         <Button variant="primary" style={{ fontWeight: 500 }}>
           Get Started

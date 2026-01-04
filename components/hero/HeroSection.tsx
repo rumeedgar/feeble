@@ -91,6 +91,7 @@ export default function HeroSection() {
         initial={{ y: windowHeight, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
+        className="hidden md:block"
         style={{
           position: "absolute",
           width: "42.36px",
@@ -105,6 +106,7 @@ export default function HeroSection() {
         initial={{ y: windowHeight, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
+        className="hidden md:block"
         style={{
           position: "absolute",
           width: "42.36px",
@@ -120,6 +122,7 @@ export default function HeroSection() {
         initial={{ y: windowHeight, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2, delay: 0.7, ease: "easeOut" }}
+        className="hidden md:block"
         style={{
           position: "absolute",
           width: "42.36px",
@@ -134,6 +137,7 @@ export default function HeroSection() {
         initial={{ y: windowHeight, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2, delay: 0.8, ease: "easeOut" }}
+        className="hidden md:block"
         style={{
           position: "absolute",
           width: "42.36px",
@@ -149,6 +153,7 @@ export default function HeroSection() {
         initial={{ y: 400, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
+        className="hidden md:block"
         style={{
           position: "absolute",
           width: "103.38px",
@@ -164,6 +169,7 @@ export default function HeroSection() {
         initial={{ y: 400, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.5, delay: 0.6, ease: "easeOut" }}
+        className="hidden md:block"
         style={{
           position: "absolute",
           width: "87.74px",
@@ -179,6 +185,7 @@ export default function HeroSection() {
         initial={{ y: 400, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.5, delay: 0.7, ease: "easeOut" }}
+        className="hidden md:block"
         style={{
           position: "absolute",
           width: "128.21px",
@@ -194,6 +201,7 @@ export default function HeroSection() {
         initial={{ y: 400, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.5, delay: 0.8, ease: "easeOut" }}
+        className="hidden md:block"
         style={{
           position: "absolute",
           width: "128.93px",

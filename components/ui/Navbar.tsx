@@ -160,15 +160,15 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 bottom-0 w-[80%] max-w-sm bg-white z-50 lg:hidden shadow-2xl"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-white z-50 lg:hidden"
             >
               <div className="flex flex-col h-full">
                 {/* Header */}
-                <div className="flex items-center justify-between p-6 border-b border-gray-100">
+                <div className="flex items-center justify-between p-6">
                   <img
                     src="/assets/logo/coup-logo.svg"
                     alt="Coup Logo"
@@ -204,33 +204,33 @@ export default function Navbar() {
                   </button>
                 </div>
 
-                {/* Navigation Links */}
-                <nav className="flex-1 overflow-y-auto py-6">
-                  <div className="flex flex-col gap-1 px-4">
+                {/* Navigation Links - Centered */}
+                <nav className="flex-1 flex items-center justify-center">
+                  <div className="flex flex-col gap-6 items-center">
                     <a
                       href="#"
-                      className="px-4 py-3 text-[#1D2026] hover:bg-[#E6F2FF] rounded-lg transition-colors font-medium text-lg"
+                      className="text-[#1D2026] hover:text-[#007AFF] transition-colors font-medium text-2xl"
                       onClick={toggleMenu}
                     >
                       How it Works
                     </a>
                     <a
                       href="#"
-                      className="px-4 py-3 text-[#1D2026] hover:bg-[#E6F2FF] rounded-lg transition-colors font-medium text-lg"
+                      className="text-[#1D2026] hover:text-[#007AFF] transition-colors font-medium text-2xl"
                       onClick={toggleMenu}
                     >
                       Pricing
                     </a>
                     <a
                       href="#"
-                      className="px-4 py-3 text-[#1D2026] hover:bg-[#E6F2FF] rounded-lg transition-colors font-medium text-lg"
+                      className="text-[#1D2026] hover:text-[#007AFF] transition-colors font-medium text-2xl"
                       onClick={toggleMenu}
                     >
                       Use Case
                     </a>
                     <a
                       href="#"
-                      className="px-4 py-3 text-[#1D2026] hover:bg-[#E6F2FF] rounded-lg transition-colors font-medium text-lg"
+                      className="text-[#1D2026] hover:text-[#007AFF] transition-colors font-medium text-2xl"
                       onClick={toggleMenu}
                     >
                       FAQ
@@ -239,7 +239,7 @@ export default function Navbar() {
                 </nav>
 
                 {/* CTA Button */}
-                <div className="p-6 border-t border-gray-100">
+                <div className="p-6">
                   <button className="w-full h-12 bg-[#007AFF] text-white rounded-full font-medium text-base hover:opacity-90 transition-opacity">
                     Contact Sales
                   </button>

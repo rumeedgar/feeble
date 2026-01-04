@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Feeble - Business Transformation Consulting",
+  title: "Coup",
   description:
-    "Transforming business inefficiencies into high-impact solutions",
+    "Coup lets you, your team, or AI workflows send iMessages directly from your phone number, running securely on your Mac or Mac Mini.",
 };
 
 export default function RootLayout({

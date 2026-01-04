@@ -14,7 +14,7 @@ export default function HeroSection() {
   const windowWidth = typeof window !== "undefined" ? window.innerWidth : 2000;
 
   useLayoutEffect(() => {
-    setMounted(true);
+      setMounted(true);
   }, []);
 
   useEffect(() => {
@@ -70,6 +70,21 @@ export default function HeroSection() {
 
   return (
     <section className="min-h-screen flex flex-col items-center px-4 relative pb-0 overflow-hidden">
+      <motion.img
+        src="/assets/icons/white-cloud.svg"
+        alt=""
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "auto",
+          height: "auto",
+          zIndex: 5,
+        }}
+      />
       <motion.img
         src="/assets/icons/bird.svg"
         alt=""
